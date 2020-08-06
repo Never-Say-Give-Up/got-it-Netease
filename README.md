@@ -12,6 +12,6 @@
 ### 这是一个依赖包列表 (๑•̀ㅂ•́)و✧
 &emsp;依赖如下Python版本与运行环境：
 > />= Python 3.5
-Selenium
-requests
-Chrome webdriver（Selenium对应的浏览器驱动）
+&nbsp;Selenium
+&nbsp;requests
+&nbsp;Chrome webdriver（Selenium对应的浏览器驱动）
