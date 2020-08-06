@@ -3,19 +3,11 @@ import re
 import requests
 from time import time
 
-bro = None
+bro = webdriver.Chrome()
 
 down_pos = "D://网易云/"  #下载位置
 music_type = "(m4a|mp3)"    #识别的曲目扩展名（采用正则表达式语言，越多越好）
 song_name = ['你若成风','萌二代']   #歌曲列表
-
-'''启动浏览器'''
-def init_chrome():
-    global bro
-    
-    prefs = {'profile.default_content_settings.popups': 0, 'download.default_directory': down_pos}   #设置下载地址
-    options.add_experimental_option('prefs', prefs)
-    bro = webdriver.Chrome(chrome_options=options)
 
 def search_song(song_name,singer_name=''):
     global bro
@@ -82,7 +74,6 @@ def download_song(name,url):
 def main():
     global bro,song_name
     
-    init_chrome()
     for name in song_name:   #多曲子
         while(True):    #防异常
             try:
@@ -96,3 +87,4 @@ def main():
                 continue
 
 main()
+    
